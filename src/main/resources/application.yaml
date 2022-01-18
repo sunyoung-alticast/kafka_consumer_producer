@@ -1,0 +1,22 @@
+server:
+    port: 33300
+
+spring:
+    cloud:
+        config:
+            label: develop
+    output:
+        ansi:
+            enabled: always
+    data:
+        mongodb:
+    kafka:
+        consumer:
+            bootstrap-servers: kafkaserver.name.com:9092
+            key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+        producer:
+            bootstrap-servers: kafkaserver.name.com:9092
+            key-serializer: org.apache.kafka.common.serialization.StringSerializer
+            value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
